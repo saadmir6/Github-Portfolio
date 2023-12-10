@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PanelComponent {
 
+  @Input() caption = '';
+  @Input() icon = '';
+
 }

@@ -1,0 +1,14 @@
+<app-panel caption="Organizations" icon="diagram-3">
+    <div class="list-group">
+        <a href="https://www.github.com/{{orgs.login}}" class="list-group-item list-group-item-action" *ngFor="let org of orgs$ | async"></a>
+        <div class="row">
+            <img [src]="org.avatar_url" alt="">
+            <div class="col-sm-9">
+                <div class="d-flex w-100 justify-content-between" >
+                    <h5 class="mb-1">{{orgs$.login}}</h5>
+                </div>
+                <p class="mb-1">{{orgs$.description}}</p>
+            </div>
+        </div>
+    </div>
+</app-panel>
